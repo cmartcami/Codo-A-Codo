@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: #D81F26; 
+    background:#3c3c3c ;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.navig{
+    width: 90%;
+    margin: auto;
+
+}
+/*navigation*/
+
+.nav-main{
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+    width: 90%;
+}
+.notflix-main{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+}
+/*NAV LEFT*/
+.nav-main ul{
+    display: flex;
+}
+.nav-main ul li{
+    padding: 15px;
+}
+.nav-main ul li a{
+    padding: 2px;
+}
+.nav-main ul li a:hover{
+    border-bottom: 2px solid white;
+}
+.nav-main ul.nav-menu{
+    flex: 1;
+    margin-left: 20px;
+}
+.menu-btn{
+    cursor: pointer;
+    top: 25px;
+    right: 30px;
+    z-index: 2;
+    font-size: 1.5rem;
+    display: none;
+}
+.fijo{
+    background: #3c3c3c;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+
+/*ESTRENO*/
+.estreno{
+    font-size: 25px;
+    color: black;
+    width: 100%;
+    height: 500px;
+    background: url('./assets/spider.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+}
+.estreno a{
+    color: black;
+    font-size: 40px;
+    opacity: .5;
+}
+.estreno a:hover{
+    opacity: 1;
+}
+/*PELICULAS O SERIES POPULARES*/
+.mas{
+    font-size: 17px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 10px;
+}
+.populares{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 25px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.populares img{
+    width: 100%;
+    height: 180px;
+    border-radius: 2%;
+    box-shadow: 2px 3px 2px rgba(51,51,51);
+}
+.populares img:hover{
+    opacity: .7;
+}
+.peliculas-series{
+    padding-top: 80px;
+    padding-bottom: 30px;
+    color: white;
+}
+/*Footer*/
+.foot{
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;}
+.foot ul{
+    
+    display: flex;
+    justify-content:space-around;
+}
+.foot ul li{
+    padding-right: 70px;
+}
+.foot ul li a {
+    font-size: 40px;
+}
+.foot ul li a:hover {
+    color: #D81F26;
+}
+
+@media screen and (max-width: 800px){
+    .nav-main ul.nav-menu{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #3c3c3c;
+        padding: 20px;
+        opacity: .9;
+        transform: translateX(-400px);
+        transition: transform .5s ease-in-out;
+    }
+    .menu-btn{
+        display: block;
+    }
+    .nav-main ul.nav-menu li{
+        padding-top: 20px;
+    }
+    .nav-main ul.nav-menu li:hover{
+        box-sizing: 25px;
+    }
+    .populares{
+        grid-template-columns: 1fr 1fr;
+    }
+    .populares img{
+        width: 98%;
+    }
+    .nav-main ul.nav-menu.show{
+        transform: translateX(-30px);
+    }
+    .estreno{
+        background: url('./assets/Spider-Man_No_Way_Home_-_Logo.png');
+        font-size: 10px;
+        height: 400px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: 0%;
+        background-size:cover;
+    }
+    .estreno a{
+        font-size: 20px;
+        color: #D81F26;
+    }
+    .foot ul li{
+        font-size: 40px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .foot ul li a {
+        font-size: 50px;
+    }
+    iframe{
+        height: 400px;
+    }
+    .mas{
+        padding-top: 20px;
+    }
+}
+@media screen and (max-width: 500px){
+    .estreno{
+        height: 270px;
+    }
+    .populares{
+        grid-template-columns: 1fr;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .foot ul li{ 
+        padding-bottom: 40px;
+    }
+    .foot ul li a {
+        font-size: 25px;
+    }
+    iframe{
+        height: 200px;
+    }
+}

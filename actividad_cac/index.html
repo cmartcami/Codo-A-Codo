@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTFLIX</title>
+    <!-- FONT BEBAS NEUE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <!-- BOOTSTRAP-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background: #3c3c3c;
+            background-image: url('./assets/backgroundindex.jpg');
+            background-size:cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            background-position: center center;
+        }
+        .not{
+            color: #D81F26;
+            font-family:'Bebas Neue', cursive;
+            font-size: 50px;
+        }
+        .bg{
+            background-image: url('./assets/backgroundinicio.png');
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            width: 30%;
+        }
+        .btn{
+            background-color:#D81F26;
+            border: none;
+            outline: none;    
+            color: white;   
+        }
+        .btn:hover{
+            background-color: #BD1C22;
+             border-color: white;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgb(255, 255, 255);
+        }
+        .btn:focus{
+            border-color: white;
+            box-shadow: none;
+            background-color: #BD1C22;
+        }
+        .form-control:focus{
+            border-color: white;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgb(255, 255, 255);
+        }
+        .form-check-input:focus{
+            border-color: white;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px rgb(255, 255, 255);
+            background-color: #3c3c3c;
+        }
+        .my-3 a{
+            text-decoration: none;
+            color: #D81F26;
+        }
+        .my-3 a:hover{
+            text-decoration: underline;
+        }
+        .warning{
+            color: #BD1C22;
+            font-weight: bold;
+            font-size: 12px;
+        }
+    
+        @media screen and (max-width: 800px){
+            body{
+                background-color: #3c3c3c;}
+            .bg{
+                width: 50%;
+            }
+        }
+        @media screen and (max-width: 500px){
+            body{
+                background-image: none;
+            }
+            .bg{
+                width: 75%;
+            }
+        }
+        
+    </style>
+
+</head>
+<body>
+    <h1 class="fw-bold text-start pt-4 pb-3 p-4 not">NOTFLIX</h1>
+    <div class="container rounded-1 bg">
+        <div class="row pd-5">
+            <div class="col">
+                <h2 class="fw-bold text-center pt-4 mb-3">Inicia Sesión</h2>
+                <form action="principal.html" id="formulario">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" name="email" id="email" required pattern="/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|
+                        \\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|
+                        \[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:
+                        (?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" name="password" id="password" required minlength="8" maxlength="15"  pattern=" [A-Za-z0- 9_]">
+                    </div>
+                    <div class="mb-3" class="form-check">
+                        <input type="checkbox" class="form-check-input" name="connectes">
+                        <label for="connected" class="form-check-label">Recordarme</label>
+                    </div>
+                    <p class="warning" id="warning"></p>
+                    <div class='d-grid'>
+                       <input type="submit" value="Iniciar Sesión" class="btn" id="btn-enviar" />
+                    </div>
+                    <div class="my-3">
+                        <span>¿No tienes una cuenta? <a href="/formu.html">Regístrate</a></span> <br>
+                        <span>¿Olvidaste tu contraseña? Haz click <a href="/formu.html">AQUÍ</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

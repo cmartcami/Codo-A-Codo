@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRARSE - NOTFLIX</title>
+    <!-- FONT BEBAS NEUE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <!-- BOOTSTRAP-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background: #3c3c3c;
+            background-image: url('./assets/backgroundindex.jpg');
+            background-size:cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        .not{
+            color: #D81F26;
+            font-family:'Bebas Neue', cursive;
+            font-size: 50px;
+        }
+        .bg{
+            background-image: url('./assets/backgroundinicio.png');
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            width: 30%;
+        }
+        .btn{
+            background-color:#D81F26;
+            border: none;
+            outline: none            
+        }
+        .btn:hover{
+            background-color: #BD1C22;
+             border-color: white;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgb(255, 255, 255);
+        }
+        .btn:focus{
+            border-color: white;
+            box-shadow: none;
+            background-color: #BD1C22;
+        }
+        .form-control:focus{
+            border-color: white;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgb(255, 255, 255);
+        }
+        .form-check-input:focus{
+            border-color: white;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px rgb(255, 255, 255);
+            background-color: #3c3c3c;
+        }
+        .my-3 a{
+            text-decoration: none;
+            color: #D81F26;
+        }
+        .my-3 a:hover{
+            text-decoration: underline;
+        }
+        .warning{
+            display: block;
+            color: #BD1C22;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        @media screen and (max-width: 800px){
+            .bg{
+                width: 50%;
+            }
+        }
+        @media screen and (max-width: 500px){
+            body{
+                background-image: none;
+            }
+            .bg{
+                width: 75%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="fw-bold text-start pt-4 pb-3 p-4 not">NOTFLIX</h1>
+    <div class="container rounded-1 bg">
+        <div class="row pd-5">
+            <div class="col">
+                <h2 class="fw-bold text-center pt-4 mb-2">Regístrate</h2>
+                <form action="index.html" id="formulario">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="name" class="form-control" name="name" id="name" minlength="1" maxlength="40" pattern="^([a-zA-Z]{2,}\s[a-zA-z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)">
+
+                </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" name="email" id="email" >
+                      
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" name="password" id="password" minlength="8" maxlength="15" pattern="[A-Za-z0-9]+">
+                        
+                    </div>
+                    <div class="mb-3" class="form-check">
+                        <input type="checkbox" class="form-check-input" name="connectes" >
+                        <label for="connected" class="form-check-label" required>Acepto Términos y Condiciones</label>
+                       
+                    </div>
+                    <p class="warning" id="warning"></p>
+                    <div class='d-grid'>
+                        <input type="submit" value="Registrarme" class="btn" id="btn-enviar" />
+                    </div>
+                    <div class="my-3">
+                        <span>¿Ya tienes una cuenta? <a href="/index.html">Inicia Sesión</a></span> <br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+     <!--CUSTOM JS-->
+     <script src="formulario.js"></script>
+</body>
+</html>
